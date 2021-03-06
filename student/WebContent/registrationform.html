@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>sRegestration form</title>
+<script>  
+function validateForm()
+{  
+var name=document.validate.name.value;
+var rollno=document.validate.rollno.value;
+var mobile=document.validate.mobile.value;
+var email=document.validate.email.value;
+var dob=document.validate.dob.value;
+var gender=document.validate.gender.value;
+var password=document.validate.password.value;
+	
+	if(name.length<1)
+	{
+		alert("Name can't be blank");
+		return false;
+	}
+	if(rollno.length<1)
+	{
+		alert("Rollno can't be blank");
+		return false;
+	}
+	if(mobile.length<1)
+	{
+		alert("Mobile number can't be blank");
+		return false;
+	}
+	if(mobile.length>13)
+	{
+		alert("Mobile number can't be more than 13 digit with country code");
+		return false;
+	}
+	if(dob.length<1)
+	{
+		alert("Dob can't be blank");
+		return false;
+	}
+	if(password.length<8)
+	{
+		alert("length of password must be 8-16");
+		return false;
+	}
+	if(password.length>16)
+	{
+		alert("length of password must be 8-16");
+		return false;
+	}
+	if (email.length<1)
+	{  
+	  	alert("Email can't be blank");  
+	 	return false;  
+	}
+
+	
+}  
+</script>
+<style type="text/css">
+input[type="text"] {
+    padding: 6px 12px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px mocha ;
+    border-color:#0F52BA;
+    border-radius: 4px;
+    color: black;
+    background-color:white;
+}
+
+
+input[type="password"] {
+    padding: 6px 12px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px mocha ;
+    border-color:#0F52BA;
+    border-radius: 4px;
+ background-color:white;
+    color: black;
+}
+
+select {
+    padding: 6px 32px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px mocha ;
+    border-color:#0F52BA;
+    border-radius: 4px;
+	background-color:white;
+    color: black;
+}
+
+input[type="submit"]
+{
+border:none;
+outline:none;
+height:40px;
+background:#7EF9FF;
+font-size:18px;
+border-radius:20px;
+
+}
+input[type="submit"]:hover{
+cursor:pointer;
+background:black;
+color:#7EF9FF;
+}
+
+
+.navbar{
+background-color: #0a3564;
+overflow:hidden;
+width:100%;
+}
+.navbar a{
+
+float:right;
+display:block;
+color:white;
+text-align:center;
+padding:9px 7px;
+font-size:20px;
+
+}
+.navbar a:hover{
+background:#7EF9FF;
+color:black;
+margin-bottom:5px;
+}
+
+.footer{
+background: #0a3564;
+overflow:hidden;
+width:100%;
+margin-top:450px;
+color:white;
+}
+
+.footer a{
+float:right;
+display:block;
+color:pink;
+text-align:center;
+padding:10px 10px;
+font-size:15px;
+
+}
+
+.footer a:hover{
+background:white;
+color:#0a3564;
+}
+</style>
+</head>
+
+
+</head>
+<body background=dwn.jpg>
+
+<p><h1 style="float:left;color:#0a3564;font-family:'Arial Black';margin-left:20px;">College</h1></p><br>
+<p><h2 style="float:left;color:#0a3564;font-family:'Arial narrow';">student</h2></p>
+
+<div class="navbar">
+<form action="google.jsp">
+<input type ="text" name="n1" style="margin:15px;float:left;">
+<input type="submit" value="search" style="margin-top:10px;float:left;"/>
+</form>
+
+<a href="Home.html">Home</a>
+<a href="AboutUs.html">About Us</a>
+</div>
+
+
+<h1 style="color:black;margin-left:20px;">Registration Form</h1>
+<center>
+
+<form name="validate" action=" regdetails.jsp" method="post" onsubmit="return validateForm()">
+<table style=margin-lefttop:200px; >
+<tr><td>Name:</td><td><input type="text"name="name" placeholder="Name"/></td></tr>
+<tr><td>Rollno:</td><td><input type="text"name="rollno" placeholder="Rollno."/></td></tr>
+<tr><td>Branch:</td><td><input type="text"name="branch" placeholder="Branch"/></td></tr>
+<tr><td>Semester:</td><td><input type="text"name="semester" placeholder="Semester"/></td></tr>
+<tr><td>Mobile.:</td><td><input type="text"name="mobile" value="+91" placeholder="Mobile"/></td></tr>
+<tr><td>Email:</td><td><input type="text"name="email" placeholder="email@gmail.com"/></td></tr>
+<tr><td>DOB:</td><td><input type="text"name="dob" placeholder="dd/mm/yyyy"/></td></tr>
+<tr><td>Gender:</td><td>
+<select name="gender" placeholder="gender">
+<option>Male</option>
+<option>Female</option>
+<option>Transgender</option>
+</select>
+</td></tr>
+<tr><td>Password:</td><td><input type="password"name="password" placeholder="Password"/></td></tr><br><br>
+<tr><td colspan="2"><center><input type="submit" value="Register"></button></center></td></tr>
+</table>
+</form>
+</center>
+
+<center>
+<div class="footer">
+<h5>@ Copyright. All Rights Reserved.<br>
+Contact:75662<br>
+Email:student@gmail.com</h5>
+
+<a href="AboutUs.html">About Us</a>
+<a href="index.html">Home</a>
+</div>
+</center>
+
+</body>
+</html>
